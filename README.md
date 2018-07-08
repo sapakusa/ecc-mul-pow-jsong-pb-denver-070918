@@ -55,17 +55,13 @@ class FieldElement(FieldElement):
         if self.prime != other.prime:
             raise RuntimeError('Primes must be the same')
         # self.num and other.num are the actual values
-        num = (self.num * other.num) % self.prime
         # self.prime is what you'll need to mod against
-        prime = self.prime
         # You need to return an element of the same class
         # use: self.__class__(num, prime)
-        return self.__class__(num, prime)
+        pass
 
     def __pow__(self, n):
-        prime = self.prime
-        num = pow(self.num, n, prime)
         # You need to return an element of the same class
         # use: self.__class__(num, prime)
-        return self.__class__(num, prime)
+        pass
 ```
